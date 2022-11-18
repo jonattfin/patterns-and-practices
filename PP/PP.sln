@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeadFirst", "HeadFirst\Head
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmsDataStructures", "AlgorithmsDataStructures\AlgorithmsDataStructures.csproj", "{2018D6A5-FC86-4569-96AC-F719C680DF41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpInDepth", "CSharpInDepth\CSharpInDepth.csproj", "{3EF707B9-E806-402C-8487-056D0A5D177F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{2018D6A5-FC86-4569-96AC-F719C680DF41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2018D6A5-FC86-4569-96AC-F719C680DF41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2018D6A5-FC86-4569-96AC-F719C680DF41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EF707B9-E806-402C-8487-056D0A5D177F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EF707B9-E806-402C-8487-056D0A5D177F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EF707B9-E806-402C-8487-056D0A5D177F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EF707B9-E806-402C-8487-056D0A5D177F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
