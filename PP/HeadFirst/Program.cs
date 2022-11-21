@@ -36,4 +36,5 @@ static IEnumerable<BasePattern> GetKnownPatterns()
     yield return new FacadePattern();
     yield return new TemplateMethodPattern();
     yield return new IteratorPattern();
+    yield return new StatePattern();
 }
