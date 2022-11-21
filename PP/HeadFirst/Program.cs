@@ -19,6 +19,8 @@ void RunPatterns()
         pattern.GetQuizzes().ToList().ForEach(Console.WriteLine);
         
         pattern.Run();
+        
+        Console.WriteLine("----Separator-----");
     }
 }
 
@@ -33,4 +35,5 @@ static IEnumerable<BasePattern> GetKnownPatterns()
     yield return new AdapterPattern();
     yield return new FacadePattern();
     yield return new TemplateMethodPattern();
+    yield return new IteratorPattern();
 }
