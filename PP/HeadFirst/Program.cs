@@ -9,15 +9,28 @@ Console.ReadKey();
 
 void RunPatterns()
 {
-    var patterns = GetKnownPatterns();
+    var patterns = GetKnownPatterns().Reverse();
     foreach (var pattern in patterns)
     {
+        Console.WriteLine($"=== {pattern.Name} ===");
         Console.WriteLine($"=== {pattern.Definition} ===");
+        
+        pattern.GetDesignPrinciples().ToList().ForEach(Console.WriteLine);
+        pattern.GetQuizzes().ToList().ForEach(Console.WriteLine);
+        
         pattern.Run();
     }
 }
 
-static IEnumerable<IPattern> GetKnownPatterns()
+static IEnumerable<BasePattern> GetKnownPatterns()
 {
     yield return new StrategyPattern();
+    yield return new ObserverPattern();
+    yield return new DecoratorPattern();
+    yield return new FactoryPattern();
+    yield return new SingletonPattern();
+    yield return new CommandPattern();
+    yield return new AdapterPattern();
+    yield return new FacadePattern();
+    yield return new TemplateMethodPattern();
 }

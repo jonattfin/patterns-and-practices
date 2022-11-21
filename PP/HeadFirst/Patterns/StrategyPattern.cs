@@ -1,8 +1,8 @@
 namespace HeadFirst.Patterns;
 
-public class StrategyPattern : IPattern
+public class StrategyPattern : BasePattern
 {
-    public void Run()
+    public override void Run()
     {
         var duck = new MallardDuck();
         duck.Display();
@@ -10,19 +10,19 @@ public class StrategyPattern : IPattern
         duck.PerformQuack();
     }
 
-    public string Name => "Strategy";
+    public override string Name => "Strategy";
 
-    public string Definition =>
+    public override string Definition =>
         $"The {Name} pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable.";
 
-    public IEnumerable<string> GetDesignPrinciples()
+    public override IEnumerable<string> GetDesignPrinciples()
     {
         yield return "Identify the aspects of your application that vary and separate them from what stays the same";
         yield return "Program to an interface, not an implementation";
         yield return "Favor composition over inheritance";
     }
 
-    public IEnumerable<Quiz> GetQuizzes()
+    public override IEnumerable<Quiz> GetQuizzes()
     {
         yield return new Quiz()
         {
