@@ -94,6 +94,13 @@ public class GumballMachine : BaseState
         }
     }
 
+    public override void Refill(int numberOfGumballs)
+    {
+        base.Refill(numberOfGumballs);
+        Count = numberOfGumballs;
+        _currentState = _noQuarterState;
+    }
+
     public override string ToString()
     {
         return $"{Count}, {_currentState}";
@@ -133,6 +140,11 @@ public class BaseState
     {
         Console.WriteLine("Dispense");
     }
+
+    public virtual void Refill(int numberOfGumballs)
+    {
+        Console.WriteLine("Refill");
+    }
 }
 
 public class NoQuarterState : BaseState
@@ -171,6 +183,12 @@ public class SoldOutState : BaseState
 {
     public SoldOutState(GumballMachine machine) : base(machine, "SoldOut")
     {
+    }
+
+    public override void Refill(int numberOfGumballs)
+    {
+        base.Refill(numberOfGumballs);
+        Machine.Refill(numberOfGumballs);
     }
 }
 
